@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Mohamed | Web Developer</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Tahoma";
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+    header {
+      background: #ffffff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #777;
+    }
+
+    .btn {
+      background: #25D366;
+      padding: 12px 25px;
+      text-decoration: none;
+      color: white;
+      border-radius: 6px;
+      font-size: 18px;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .github {
+      background: #333;
+    }
+
+    /* Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Skills */
+    .skills {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .skill-box {
+      background: #fff;
+      padding: 15px;
+      margin: 10px auto;
+      width: 220px;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Features Section */
+    .features {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .feature-box {
+      background: #f7f7f7;
+      padding: 20px;
+      margin: 15px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      font-size: 18px;
+      line-height: 1.8;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Ahmed Mohamed</h2>
+  </header>
+
+  <section class="hero fade-in">
+    <h1>Ahmed Mohamed</h1>
+    <p>متخصص في إنشاء الويب سايتس والواجهات الأمامية (Front-End)</p>
+
+    <a class="btn" href="https://wa.me/201206670242">تواصل واتساب</a>
+    <a class="btn github" href="https://github.com/bakeerbakerahmed-cyber">GitHub</a>
+  </section>
+
+  <!-- مميزات شغلك -->
+  <section class="features fade-in">
+    <h2>مميزات شغلي</h2>
+
+    <div class="feature-box fade-in">
+      ✔️ تصميم واجهات احترافية وسريعة الاستجابة (Responsive) لجميع الشاشات والموبايلات.
+    </div>
+
+    <div class="feature-box fade-in">
+      ✔️ كتابة كود نظيف ومنظم وسهل التطوير والتعديل عليه في أي وقت.
+    </div>
+
+    <div class="feature-box fade-in">
+      ✔️ تحسين سرعة الموقع وتجربة المستخدم (UX / UI) لتقديم أفضل أداء ممكن.
+    </div>
+
+    <div class="feature-box fade-in">
+      ✔️ تحويل أي تصميم (PSD / Figma) إلى كود حقيقي بجودة عالية.
+    </div>
+
+    <div class="feature-box fade-in">
+      ✔️ دعم فني كامل وتحديثات عند الحاجة بعد التسليم.
+    </div>
+
+    <div class="feature-box fade-in">
+      ✔️ إنشاء لوحات تحكم Dashboard ونظم حضور ونظم إدارة بيانات بلغة بسيطة وسريعة.
+    </div>
+  </section>
+
+  <section class="skills fade-in">
+    <h2>المهارات</h2>
+
+    <div class="skill-box fade-in">HTML</div>
+    <div class="skill-box fade-in">CSS</div>
+    <div class="skill-box fade-in">JavaScript</div>
+  </section>
+
+  <script>
+    const elements = document.querySelectorAll('.fade-in');
+
+    function reveal() {
+      elements.forEach(element => {
+        const position = element.getBoundingClientRect().top;
+
+        if (position < window.innerHeight - 100) {
+          element.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
+
+</body>
+
+</html>
